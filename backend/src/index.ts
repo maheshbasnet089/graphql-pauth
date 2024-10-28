@@ -10,7 +10,7 @@ import { $server } from '../config'
 import resolvers from './graphql/resolvers'
 import typeDefs from './graphql/types'
 import models from './models'
-import { json } from 'body-parser'
+
 
 const app = express()
 const httpServer = http.createServer(app)
