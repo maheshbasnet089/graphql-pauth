@@ -1,4 +1,5 @@
 import {encrypt} from '@contentpi/lib'
+import { IDatatypes, IUser } from '../types'
 
 export default(sequelize:any,Datatypes:IDatatypes) : IUser =>{
     const User = sequelize.define('User',{
@@ -13,7 +14,7 @@ export default(sequelize:any,Datatypes:IDatatypes) : IUser =>{
             allowNull : false, 
             unique : true, 
             validate : {
-                isAlphaNumeric : {
+                isAlphanumeric : {
                     args : true, 
                     msg : "The user just accepts alphanumeric characters"
                 },

@@ -7,9 +7,11 @@ import http from 'http'
 import express from 'express'
 import {applyMiddleware} from 'graphql-middleware'
 import { $server } from '../config'
+
+
+import models from './models/'
 import resolvers from './graphql/resolvers'
 import typeDefs from './graphql/types'
-import models from './models'
 
 
 const app = express()

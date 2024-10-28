@@ -1,6 +1,7 @@
 import {doLogin,getUserBy} from '../../lib/auth'
 import {getUserData} from '../../lib/jwt'
-import {ICreateUserInput,ILoginInput,IModels,IToken,IUser} from './../types'
+import { ICreateUserInput, ILoginInput, IModels, IToken, IUser } from '../../types'
+
 
 export default {
     Query : {
@@ -12,7 +13,7 @@ export default {
                     id : connectedUser.id, 
                     email : connectedUser.email, 
                     active : connectedUser.active
-                },[connectedUser.role],models)
+                },models)
                 if(user){
                     return connectedUser
                 }
